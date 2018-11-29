@@ -1,0 +1,19 @@
+<div class="row justify-content-center">
+    <div class="col-lg-8 border border-dark rounded justify-content-center m-4 bg-light">
+        <div class="row justify-content-center m-3">
+            <h1 class="text-center">Here are some awesome quotes!</h1>
+        </div>
+        @foreach(var quote in ViewBag.AllQuotes)
+        {
+            <div class="row m-4">
+                <h4>"@quote["quote"]"</h4>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <h5>-@quote["name"] on @quote["created_at"]</h5>
+                </div>
+                <hr class="my-4" style="width: 90%; color: black; height: 1px; background-color: black;">
+            </div>
+        }
+    </div>
+</div>

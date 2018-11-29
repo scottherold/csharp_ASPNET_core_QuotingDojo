@@ -1,0 +1,36 @@
+@model Quote
+<div class="row justify-content-center">
+    <div class="col-lg-8 border border-dark rounded justify-content-center m-4 bg-light">
+        <form class="m-3" asp-action="Create" asp-controller="Main" method="POST">
+            <div class="form-row justify-content-center m-3">
+                <h1 class="text-center">Welcome to Quoting Dojo</h1>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-4 ml-5">
+                    <label asp-for="Name"><h5>Your Name:</h5></label>
+                </div>
+                <div class="col-lg-3 justify-content-start">
+                    <input type="text" class="form-control" asp-for="Name">
+                    <p><span asp-validation-for="Name" class="text-danger"></span></p>
+                </div>
+            </div>
+            <div class="form-row mb-4">
+                <div class="col-lg-4 ml-5">
+                    <label asp-for="Name"><h5>Your Quote:</h5></label>
+                </div>
+                <div class="col-lg-6 justify-content-start">
+                    <textarea class="form-control" asp-for="QuoteText" rows="5"></textarea>
+                    <p><span asp-validation-for="QuoteText" class="text-danger"></span></p>
+                </div>
+            </div>
+            <div class="form-row justify-content-center mb-2">
+                <div class="col-lg-5 text-center">
+                    <button type="submit" class="btn btn-primary pl-4 pr-4">Add my quote!</button>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <a href="/quotes" class="btn btn-primary pl-4 pr-4">Skip to quotes!</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
